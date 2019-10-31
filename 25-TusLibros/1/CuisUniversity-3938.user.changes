@@ -1,0 +1,440 @@
+
+
+----STARTUP---- (31 October 2019 15:10:53) as /home/horacio/soft/cuis/CuisUniversity-3938.image!
+
+
+Object subclass: #Cart
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TusLibros'!
+
+!classDefinition: #Cart category: #TusLibros stamp: 'HJGG 10/31/2019 15:15:08'!
+Object subclass: #Cart
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TusLibros'!
+
+TestCase subclass: #CartTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TusLibros'!
+
+!classDefinition: #CartTest category: #TusLibros stamp: 'HJGG 10/31/2019 15:17:21'!
+TestCase subclass: #CartTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TusLibros'!
+!CartTest methodsFor: 'no messages' stamp: 'HJGG 10/31/2019 15:19:05'!
+test01AmountOfBooksInCartWith1IsCorrect
+
+	| aCart theShining |
+	aCart _ Cart new.
+	theShining _ '9780451119674'.
+	self assert: aCart amountOfBooks = 1.! !
+
+!testRun: #CartTest #test01AmountOfBooksInCartWith1IsCorrect stamp: 'HJGG 10/31/2019 15:19:20'!
+ERROR!
+!Cart methodsFor: 'accesing' stamp: 'HJGG 10/31/2019 15:19:31'!
+amountOfBooks
+	self shouldBeImplemented.! !
+!Cart methodsFor: 'accesing' stamp: 'HJGG 10/31/2019 15:19:37' prior: 50777391!
+amountOfBooks
+	
+	^1.! !
+
+!testRun: #CartTest #test01AmountOfBooksInCartWith1IsCorrect stamp: 'HJGG 10/31/2019 15:19:38'!
+PASSED!
+
+!testRun: #CartTest #test01AmountOfBooksInCartWith1IsCorrect stamp: 'HJGG 10/31/2019 15:19:38'!
+PASSED!
+!CartTest methodsFor: 'as yet unclassified' stamp: 'HJGG 10/31/2019 15:21:14' prior: 50777380!
+test01AmountOfBooksInCartWith1IsCorrect
+
+	| aCart theShining |
+	aCart _ Cart new.
+	theShining _ '9780451119674'.
+	aCart addBook: theShining.
+	self assert: aCart amountOfBooks = 1.! !
+
+!testRun: #CartTest #test01AmountOfBooksInCartWith1IsCorrect stamp: 'HJGG 10/31/2019 15:22:47'!
+ERROR!
+!Cart methodsFor: 'cart usage' stamp: 'HJGG 10/31/2019 15:22:59'!
+addBook: aString 
+	self shouldBeImplemented.! !
+!Cart methodsFor: 'cart usage' stamp: 'HJGG 10/31/2019 15:23:08' prior: 50777418!
+addBook: aString 
+	! !
+
+!testRun: #CartTest #test01AmountOfBooksInCartWith1IsCorrect stamp: 'HJGG 10/31/2019 15:23:10'!
+PASSED!
+
+!testRun: #CartTest #test01AmountOfBooksInCartWith1IsCorrect stamp: 'HJGG 10/31/2019 15:23:10'!
+PASSED!
+!CartTest methodsFor: 'as yet unclassified' stamp: 'HJGG 10/31/2019 15:23:16'!
+test02AmountOfBooksInCartWith2IsCorrect
+
+	| aCart theShining theShining2|
+	aCart _ Cart new.
+	theShining _ '9780451119674'.
+	theShining2 _ '9780451119674'.
+	aCart addBook: theShining.
+	aCart addBook: theShining2.	
+	self assert: aCart amountOfBooks = 2.! !
+
+!testRun: #CartTest #test02AmountOfBooksInCartWith2IsCorrect stamp: 'HJGG 10/31/2019 15:23:17'!
+FAILURE!
+!Cart class methodsFor: 'instance creation' stamp: 'HJGG 10/31/2019 15:23:47'!
+new
+	"DO NOT FORGET TO RENAME COLLABORATORS AND REMOVE THIS COMMENT!!!!"
+	self shouldBeImplemented.
+	^self new initializeNew! !
+!Cart class methodsFor: 'instance creation' stamp: 'HJGG 10/31/2019 15:24:16' prior: 50777447!
+new
+
+	^self basicNew initialize.! !
+
+!testRun: #CartTest #test02AmountOfBooksInCartWith2IsCorrect stamp: 'HJGG 10/31/2019 15:24:20'!
+FAILURE!
+
+!testRun: #CartTest #test02AmountOfBooksInCartWith2IsCorrect stamp: 'HJGG 10/31/2019 15:24:26'!
+FAILURE!
+
+!testRun: #CartTest #test02AmountOfBooksInCartWith2IsCorrect stamp: 'HJGG 10/31/2019 15:24:26'!
+FAILURE!
+
+!testRun: #CartTest #test01AmountOfBooksInCartWith1IsCorrect stamp: 'HJGG 10/31/2019 15:24:37'!
+PASSED!
+
+!testRun: #CartTest #test02AmountOfBooksInCartWith2IsCorrect stamp: 'HJGG 10/31/2019 15:24:37'!
+FAILURE!
+
+!testRun: #CartTest #test02AmountOfBooksInCartWith2IsCorrect stamp: 'HJGG 10/31/2019 15:24:37'!
+FAILURE!
+
+!testRun: #CartTest #test01AmountOfBooksInCartWith1IsCorrect stamp: 'HJGG 10/31/2019 15:28:11'!
+PASSED!
+
+!testRun: #CartTest #test01AmountOfBooksInCartWith1IsCorrect stamp: 'HJGG 10/31/2019 15:28:11'!
+PASSED!
+
+!testRun: #CartTest #test02AmountOfBooksInCartWith2IsCorrect stamp: 'HJGG 10/31/2019 15:28:11'!
+FAILURE!
+
+!testRun: #CartTest #test02AmountOfBooksInCartWith2IsCorrect stamp: 'HJGG 10/31/2019 15:28:11'!
+FAILURE!
+!Cart methodsFor: 'nil' stamp: 'HJGG 10/31/2019 15:33:39'!
+initialize
+
+	! !
+!Cart methodsFor: 'as yet unclassified' stamp: 'HJGG 10/31/2019 15:33:41' prior: 50777490!
+initialize
+
+	! !
+
+!testRun: #CartTest #test01AmountOfBooksInCartWith1IsCorrect stamp: 'HJGG 10/31/2019 15:33:44'!
+PASSED!
+
+!testRun: #CartTest #test02AmountOfBooksInCartWith2IsCorrect stamp: 'HJGG 10/31/2019 15:33:47'!
+FAILURE!
+
+!testRun: #CartTest #test02AmountOfBooksInCartWith2IsCorrect stamp: 'HJGG 10/31/2019 15:33:47'!
+FAILURE!
+
+!classDefinition: #Cart category: #TusLibros stamp: 'HJGG 10/31/2019 15:36:48'!
+Object subclass: #Cart
+	instanceVariableNames: 'elements'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TusLibros'!
+!Cart methodsFor: 'as yet unclassified' stamp: 'HJGG 10/31/2019 15:36:46' prior: 50777494!
+initialize
+
+	elements _ Set new.! !
+
+!testRun: #CartTest #test01AmountOfBooksInCartWith1IsCorrect stamp: 'HJGG 10/31/2019 15:36:50'!
+PASSED!
+
+!testRun: #CartTest #test02AmountOfBooksInCartWith2IsCorrect stamp: 'HJGG 10/31/2019 15:36:50'!
+FAILURE!
+
+!testRun: #CartTest #test02AmountOfBooksInCartWith2IsCorrect stamp: 'HJGG 10/31/2019 15:36:50'!
+FAILURE!
+!Cart methodsFor: 'cart usage' stamp: 'HJGG 10/31/2019 15:37:20' prior: 50777423!
+addBook: aBook 
+	
+	elements add: aBook! !
+
+!testRun: #CartTest #test01AmountOfBooksInCartWith1IsCorrect stamp: 'HJGG 10/31/2019 15:37:21'!
+PASSED!
+
+!testRun: #CartTest #test02AmountOfBooksInCartWith2IsCorrect stamp: 'HJGG 10/31/2019 15:37:21'!
+FAILURE!
+
+!testRun: #CartTest #test02AmountOfBooksInCartWith2IsCorrect stamp: 'HJGG 10/31/2019 15:37:21'!
+FAILURE!
+
+!testRun: #CartTest #test02AmountOfBooksInCartWith2IsCorrect stamp: 'HJGG 10/31/2019 15:37:24'!
+FAILURE!
+
+!testRun: #CartTest #test02AmountOfBooksInCartWith2IsCorrect stamp: 'HJGG 10/31/2019 15:38:15'!
+FAILURE!
+
+!testRun: #CartTest #test02AmountOfBooksInCartWith2IsCorrect stamp: 'HJGG 10/31/2019 15:38:15'!
+FAILURE!
+
+aCart amountOfBooks!
+!Cart methodsFor: 'accesing' stamp: 'HJGG 10/31/2019 15:40:51' prior: 50777395!
+amountOfBooks
+	
+	^elements size.! !
+
+!testRun: #CartTest #test01AmountOfBooksInCartWith1IsCorrect stamp: 'HJGG 10/31/2019 15:40:54'!
+PASSED!
+
+!testRun: #CartTest #test02AmountOfBooksInCartWith2IsCorrect stamp: 'HJGG 10/31/2019 15:40:54'!
+FAILURE!
+
+!testRun: #CartTest #test02AmountOfBooksInCartWith2IsCorrect stamp: 'HJGG 10/31/2019 15:40:54'!
+FAILURE!
+
+aCart amountOfBooks!
+
+!testRun: #CartTest #test02AmountOfBooksInCartWith2IsCorrect stamp: 'HJGG 10/31/2019 15:41:27'!
+FAILURE!
+
+!testRun: #CartTest #test02AmountOfBooksInCartWith2IsCorrect stamp: 'HJGG 10/31/2019 15:41:27'!
+FAILURE!
+
+!testRun: #CartTest #test02AmountOfBooksInCartWith2IsCorrect stamp: 'HJGG 10/31/2019 15:41:41'!
+FAILURE!
+
+!testRun: #CartTest #test02AmountOfBooksInCartWith2IsCorrect stamp: 'HJGG 10/31/2019 15:41:41'!
+FAILURE!
+
+!testRun: #CartTest #test02AmountOfBooksInCartWith2IsCorrect stamp: 'HJGG 10/31/2019 15:42:07'!
+FAILURE!
+
+aCart!
+!CartTest methodsFor: 'as yet unclassified' stamp: 'HJGG 10/31/2019 15:42:40' prior: 50777433!
+test02AmountOfBooksInCartWith2IsCorrect
+
+	| aCart theShining theShining2|
+	aCart _ Cart new.
+	theShining _ '9780451119674'.
+	theShining2 _ '9780451119675'.
+	aCart addBook: theShining.
+	aCart addBook: theShining2.	
+	self assert: aCart amountOfBooks = 2.! !
+
+!testRun: #CartTest #test02AmountOfBooksInCartWith2IsCorrect stamp: 'HJGG 10/31/2019 15:42:42'!
+PASSED!
+!CartTest methodsFor: 'as yet unclassified' stamp: 'HJGG 10/31/2019 15:43:12'!
+test02AmountOfBooksInCartWith2DifferentIsCorrect
+
+	| aCart theShining theShining2|
+	aCart _ Cart new.
+	theShining _ '9780451119674'.
+	theShining2 _ '9780451119675'.
+	aCart addBook: theShining.
+	aCart addBook: theShining2.	
+	self assert: aCart amountOfBooks = 2.! !
+
+!methodRemoval: CartTest #test02AmountOfBooksInCartWith2IsCorrect stamp: 'HJGG 10/31/2019 15:43:12'!
+test02AmountOfBooksInCartWith2IsCorrect
+
+	| aCart theShining theShining2|
+	aCart _ Cart new.
+	theShining _ '9780451119674'.
+	theShining2 _ '9780451119675'.
+	aCart addBook: theShining.
+	aCart addBook: theShining2.	
+	self assert: aCart amountOfBooks = 2.!
+
+!testRun: #CartTest #test02AmountOfBooksInCartWith2DifferentIsCorrect stamp: 'HJGG 10/31/2019 15:43:15'!
+PASSED!
+!CartTest methodsFor: 'as yet unclassified' stamp: 'HJGG 10/31/2019 15:44:05'!
+test02AmountOfBooksInCartWith2EqualIsCorrect
+
+	| aCart theShining|
+	aCart _ Cart new.
+	theShining _ '9780451119674'.
+	aCart addBook: theShining.
+	aCart addBook: theShining.	
+	self assert: aCart amountOfBooks = 2.! !
+
+!testRun: #CartTest #test02AmountOfBooksInCartWith2EqualIsCorrect stamp: 'HJGG 10/31/2019 15:44:13'!
+FAILURE!
+!CartTest methodsFor: 'as yet unclassified' stamp: 'HJGG 10/31/2019 15:44:23'!
+test03AmountOfBooksInCartWith2EqualIsCorrect
+
+	| aCart theShining|
+	aCart _ Cart new.
+	theShining _ '9780451119674'.
+	aCart addBook: theShining.
+	aCart addBook: theShining.	
+	self assert: aCart amountOfBooks = 2.! !
+
+!methodRemoval: CartTest #test02AmountOfBooksInCartWith2EqualIsCorrect stamp: 'HJGG 10/31/2019 15:44:23'!
+test02AmountOfBooksInCartWith2EqualIsCorrect
+
+	| aCart theShining|
+	aCart _ Cart new.
+	theShining _ '9780451119674'.
+	aCart addBook: theShining.
+	aCart addBook: theShining.	
+	self assert: aCart amountOfBooks = 2.!
+
+!testRun: #CartTest #test03AmountOfBooksInCartWith2EqualIsCorrect stamp: 'HJGG 10/31/2019 15:44:25'!
+FAILURE!
+
+!testRun: #CartTest #test03AmountOfBooksInCartWith2EqualIsCorrect stamp: 'HJGG 10/31/2019 15:44:28'!
+FAILURE!
+!Cart methodsFor: 'as yet unclassified' stamp: 'HJGG 10/31/2019 15:44:55' prior: 50777514!
+initialize
+
+	elements _ Bag new.
+	! !
+
+!testRun: #CartTest #test03AmountOfBooksInCartWith2EqualIsCorrect stamp: 'HJGG 10/31/2019 15:44:57'!
+PASSED!
+
+!testRun: #CartTest #test01AmountOfBooksInCartWith1IsCorrect stamp: 'HJGG 10/31/2019 15:44:57'!
+PASSED!
+
+!testRun: #CartTest #test02AmountOfBooksInCartWith2DifferentIsCorrect stamp: 'HJGG 10/31/2019 15:44:57'!
+PASSED!
+
+!testRun: #CartTest #test03AmountOfBooksInCartWith2EqualIsCorrect stamp: 'HJGG 10/31/2019 15:44:57'!
+PASSED!
+!Cart methodsFor: 'cart usage' stamp: 'HJGG 10/31/2019 15:45:58'!
+addToCart: aBook 
+	
+	elements add: aBook! !
+!CartTest methodsFor: 'as yet unclassified' stamp: 'HJGG 10/31/2019 15:45:58' prior: 50777406!
+test01AmountOfBooksInCartWith1IsCorrect
+
+	| aCart theShining |
+	aCart _ Cart new.
+	theShining _ '9780451119674'.
+	aCart addToCart: theShining.
+	self assert: aCart amountOfBooks = 1.! !
+!CartTest methodsFor: 'as yet unclassified' stamp: 'HJGG 10/31/2019 15:45:58' prior: 50777638!
+test03AmountOfBooksInCartWith2EqualIsCorrect
+
+	| aCart theShining|
+	aCart _ Cart new.
+	theShining _ '9780451119674'.
+	aCart addToCart: theShining.
+	aCart addToCart: theShining.	
+	self assert: aCart amountOfBooks = 2.! !
+!CartTest methodsFor: 'as yet unclassified' stamp: 'HJGG 10/31/2019 15:45:58' prior: 50777599!
+test02AmountOfBooksInCartWith2DifferentIsCorrect
+
+	| aCart theShining theShining2|
+	aCart _ Cart new.
+	theShining _ '9780451119674'.
+	theShining2 _ '9780451119675'.
+	aCart addToCart: theShining.
+	aCart addToCart: theShining2.	
+	self assert: aCart amountOfBooks = 2.! !
+
+!methodRemoval: Cart #addBook: stamp: 'HJGG 10/31/2019 15:45:58'!
+addBook: aBook 
+	
+	elements add: aBook!
+
+!testRun: #CartTest #test01AmountOfBooksInCartWith1IsCorrect stamp: 'HJGG 10/31/2019 15:46:00'!
+PASSED!
+
+!testRun: #CartTest #test02AmountOfBooksInCartWith2DifferentIsCorrect stamp: 'HJGG 10/31/2019 15:46:00'!
+PASSED!
+
+!testRun: #CartTest #test03AmountOfBooksInCartWith2EqualIsCorrect stamp: 'HJGG 10/31/2019 15:46:00'!
+PASSED!
+!CartTest methodsFor: 'as yet unclassified' stamp: 'HJGG 10/31/2019 15:48:57'!
+test04CanAddMultipleCopiesAtOnce
+
+	| aCart theShining|
+	aCart _ Cart new.
+	theShining _ '9780451119674'.
+	aCart addtToCart: 100 copiesOf: theShining .
+	self assert: aCart amountOfBooks = 100.! !
+
+!testRun: #CartTest #test01AmountOfBooksInCartWith1IsCorrect stamp: 'HJGG 10/31/2019 15:49:02'!
+PASSED!
+
+!testRun: #CartTest #test02AmountOfBooksInCartWith2DifferentIsCorrect stamp: 'HJGG 10/31/2019 15:49:02'!
+PASSED!
+
+!testRun: #CartTest #test03AmountOfBooksInCartWith2EqualIsCorrect stamp: 'HJGG 10/31/2019 15:49:02'!
+PASSED!
+
+!testRun: #CartTest #test04CanAddMultipleCopiesAtOnce stamp: 'HJGG 10/31/2019 15:49:02'!
+ERROR!
+
+!testRun: #CartTest #test04CanAddMultipleCopiesAtOnce stamp: 'HJGG 10/31/2019 15:49:02'!
+ERROR!
+
+!testRun: #CartTest #test04CanAddMultipleCopiesAtOnce stamp: 'HJGG 10/31/2019 15:50:05'!
+ERROR!
+
+!testRun: #CartTest #test04CanAddMultipleCopiesAtOnce stamp: 'HJGG 10/31/2019 15:50:10'!
+ERROR!
+
+!testRun: #CartTest #test01AmountOfBooksInCartWith1IsCorrect stamp: 'HJGG 10/31/2019 15:50:20'!
+PASSED!
+
+!testRun: #CartTest #test02AmountOfBooksInCartWith2DifferentIsCorrect stamp: 'HJGG 10/31/2019 15:50:20'!
+PASSED!
+
+!testRun: #CartTest #test03AmountOfBooksInCartWith2EqualIsCorrect stamp: 'HJGG 10/31/2019 15:50:20'!
+PASSED!
+
+!testRun: #CartTest #test04CanAddMultipleCopiesAtOnce stamp: 'HJGG 10/31/2019 15:50:20'!
+ERROR!
+
+!testRun: #CartTest #test04CanAddMultipleCopiesAtOnce stamp: 'HJGG 10/31/2019 15:50:20'!
+ERROR!
+!Cart methodsFor: 'cart usage' stamp: 'HJGG 10/31/2019 15:50:37'!
+addtToCart: aSmallInteger copiesOf: aString 
+	self shouldBeImplemented.! !
+!Cart methodsFor: 'cart usage' stamp: 'HJGG 10/31/2019 15:52:43' prior: 50777778!
+addtToCart: amount copiesOf: aBook 
+	
+	elements add: aBook withOccurrences: amount.
+! !
+
+!testRun: #CartTest #test04CanAddMultipleCopiesAtOnce stamp: 'HJGG 10/31/2019 15:52:45'!
+PASSED!
+
+!testRun: #CartTest #test04CanAddMultipleCopiesAtOnce stamp: 'HJGG 10/31/2019 15:52:47'!
+PASSED!
+!CartTest methodsFor: 'as yet unclassified' stamp: 'HJGG 10/31/2019 15:54:51' prior: 50777731!
+test04CanAddMultipleCopiesAtOnce
+
+	| aCart theShining|
+	aCart _ Cart new.
+	theShining _ '9780451119674'.
+	aCart addtToCart: 100 copiesOf: theShining.
+	self assert: aCart amountOfBooks = 100.! !
+
+!testRun: #CartTest #test04CanAddMultipleCopiesAtOnce stamp: 'HJGG 10/31/2019 15:54:52'!
+PASSED!
+
+!testRun: #CartTest #test01AmountOfBooksInCartWith1IsCorrect stamp: 'HJGG 10/31/2019 15:54:52'!
+PASSED!
+
+!testRun: #CartTest #test02AmountOfBooksInCartWith2DifferentIsCorrect stamp: 'HJGG 10/31/2019 15:54:52'!
+PASSED!
+
+!testRun: #CartTest #test03AmountOfBooksInCartWith2EqualIsCorrect stamp: 'HJGG 10/31/2019 15:54:52'!
+PASSED!
+
+!testRun: #CartTest #test04CanAddMultipleCopiesAtOnce stamp: 'HJGG 10/31/2019 15:54:52'!
+PASSED!
+
+----QUIT----(31 October 2019 15:55:27) CuisUniversity-3938.image priorSource: 14319118!
